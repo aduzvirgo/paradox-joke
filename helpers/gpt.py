@@ -1,13 +1,13 @@
+
 import requests
 
 def gpt(text):
     url = "http://216.98.10.228:5000/gpt"
     params = {
-        "ask": text
-    }
+    "query":text}
     response = requests.get(url, params=params)
     data = response.json()
-    return data['response']
+    return data['answer']
 
 # Example usage:
 text_input = "hello world"
